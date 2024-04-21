@@ -96,11 +96,6 @@ public class PrestamoService {
         Integer plazoPrestamo = prestamo.getPlazoPrestamo();
         Float montoPrestamo = prestamo.getMontoPrestamo();
 
-        ArrayList<String> sistemas = this.listarTiposSistemas();
-        Optional<String> sistemaEncontrado = sistemas.stream()
-                .filter(sistema -> sistema.equals(tipoSistema.toUpperCase()))
-                .findFirst();
-
         Map<String, Integer> prestamos = this.listarTiposPrestamos();
         Integer tasaInteresAnualPorTipoPrestamo = Integer.valueOf(prestamos.get(tipoPrestamo.toUpperCase()));
         if(Objects.equals(tipoSistema, "ALEMAN")) {
