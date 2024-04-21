@@ -33,7 +33,7 @@ public class PrestamoController {
         return this.prestamoService.listarTiposSistemas();
     }
 
-    @PostMapping(path = "/sistema-frances")
+    @PostMapping(path = "/simular-prestamo")
     public String calcularCuotaPorSistema(@RequestBody Prestamo prestamo) throws JsonProcessingException {
         try {
             return this.prestamoService.calcularCuota(prestamo);
